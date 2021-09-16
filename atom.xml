@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://57classmate.github.io</id>
+    <id>https://57classmate.github.io/57cool.github.io</id>
     <title>57号同学</title>
-    <updated>2021-09-16T10:01:15.928Z</updated>
+    <updated>2021-09-16T10:04:40.883Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://57classmate.github.io"/>
-    <link rel="self" href="https://57classmate.github.io/atom.xml"/>
+    <link rel="alternate" href="https://57classmate.github.io/57cool.github.io"/>
+    <link rel="self" href="https://57classmate.github.io/57cool.github.io/atom.xml"/>
     <subtitle>本站致力于发现优秀的网站，实用的软件，分享来自互联网最好用，最有趣的产品</subtitle>
-    <logo>https://57classmate.github.io/images/avatar.png</logo>
-    <icon>https://57classmate.github.io/favicon.ico</icon>
+    <logo>https://57classmate.github.io/57cool.github.io/images/avatar.png</logo>
+    <icon>https://57classmate.github.io/57cool.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 57号同学</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://57classmate.github.io/post/hello-gridea/</id>
-        <link href="https://57classmate.github.io/post/hello-gridea/">
+        <id>https://57classmate.github.io/57cool.github.io/post/hello-gridea/</id>
+        <link href="https://57classmate.github.io/57cool.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
