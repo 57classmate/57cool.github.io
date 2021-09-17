@@ -216,6 +216,21 @@
     <!--------- 数学公式👆----------------- -->
     <!--------- daovocie功能👇 ------------------->
     
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/" + "729bc437" + ".js", "daovoice")
+    </script>
+    
     <!--------- daovocie功能👆 ------------------->
     <!-- -----------------twikoo评论系统引入👇 --------->
     <script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/twikoo.all.min.js"></script>
@@ -264,10 +279,10 @@
                         src='https://57classmate.github.io/57cool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://57classmate.github.io/57cool.github.io/images/avatar.png?v=1631876931173" class="avatar">
+            <img src="https://57classmate.github.io/57cool.github.io/images/avatar.png?v=1631882587777" class="avatar">
         </div>
         <div class="sitename">57号同学</div>
-        <span class="description" data-text='["本站致力于发现优秀的网站，实用的软件，分享来自互联网最好用，最有趣的产品"]'>&nbsp;</span>
+        <span class="description" data-text='["分享来自互联网最好用，最有趣的产品"]'>&nbsp;</span>
         <div class="siteinfocontainer">
             <span class="siteinfo">文章</span>
             <span class="siteinfo">标签</span>
@@ -393,7 +408,7 @@
                 </div>
                 
             </div>
-            <div class="copyright" style="color:white;text-align: center;">
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
             </div>
         </div>
 
@@ -488,12 +503,12 @@
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
     <script>
-        let donateChoice = false
+        let donateChoice = true
     </script>
     
     
@@ -881,6 +896,13 @@
     }
 </script>
 
+<script>
+    daovoice('init', {
+        app_id: "729bc437"
+    });
+    daovoice('update');
+</script>
+
 
 
 <!--------------------- 菜单栏图标加载功能👇 ----------------------->
@@ -1005,15 +1027,41 @@ menulist.eq(i).show();
             </div>
             <hr style="width: 80%;">
             
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/file/zanshangma.png" alt="" class="donate">
+            </div>
+            
             <div class="postfooter">
                 <ul class="post-copyright">
-                    <li><strong>文章作者：</strong></li>
+                    <li><strong>文章作者：</strong>阿隆</li>
             <li><strong>原文链接：</strong>https://57classmate.github.io/57cool.github.io/post/about/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
         <div id="otherpost">
             
             
@@ -1072,6 +1120,69 @@ menulist.eq(i).show();
             
         </div>
         <!-- aplayer播放器加载👇 -->
+            
+            <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+</head>
+
+<body>
+    <div class="miniMode">
+        <meting-js id="myaplayer" server="netease" type="playlist" fixed="true" order="default" muted="muted">
+        </meting-js>
+    </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+    function aplayerInit() {
+        var aplayerid = "1669566664";
+        var aplayerserver = "netease";
+        var aplayerorder = "default";
+        var aplayerautoplay = "true";
+        var aplayer = $("#myaplayer");
+        aplayer.attr("server", aplayerserver);
+        aplayer.attr("id", aplayerid);
+        aplayer.attr("order", aplayerorder);
+        if (aplayerautoplay == "true")
+            aplayer.attr("autoplay", "true");
+    }
+    aplayerInit();
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/Aplayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script>
+    function aplayerbtnInit() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        if(player==undefined)return false;
+        player.lrc.hide();
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == false) {
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+
+    function aplayerPlay() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == true) {
+            player.play();
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            player.pause();
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+</script>
             
         <!-- aplayer播放器加载👆 -->
     </div>
