@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/styles/main.css">
-    <meta name="description" content="分享来自互联网最好用，最有趣的产品" />
+    <meta name="description" content="分享来自互联网最好用，最有趣的产品 " />
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/font-awesome.css">
     <title>57号同学</title>
 </head>
@@ -102,10 +102,10 @@
                         src='https://57classmate.github.io/57cool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://57classmate.github.io/57cool.github.io/images/avatar.png?v=1631888471359" class="avatar">
+            <img src="https://57classmate.github.io/57cool.github.io/images/avatar.png?v=1632367353668" class="avatar">
         </div>
         <div class="sitename">57号同学</div>
-        <span class="description" data-text='["分享来自互联网最好用，最有趣的产品"]'>&nbsp;</span>
+        <span class="description" data-text='["分享来自互联网最好用，最有趣的产品 "]'>&nbsp;</span>
         <div class="siteinfocontainer">
             <span class="siteinfo">文章</span>
             <span class="siteinfo">标签</span>
@@ -579,13 +579,13 @@
                 shareInit();
             if (donateChoice)
                 donateInit();
-            if ("default" == "default"&&!commentsHide) {
+            if ("valine" == "default"&&!commentsHide) {
                 $("#comment").hide()
                 commentsHide = true
             }
             lazyload();
             codeinit();
-            if ("default" == "twikoo") {
+            if ("valine" == "twikoo") {
                 //twikoo头像更换
                 setTimeout(replaceAvatar, 3000);
                 setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
@@ -1040,6 +1040,37 @@ menulist.eq(i).show();
                     <div id="comment" class="comment" >
                         <div class="commentcontainer">
                             
+                                
+                                    
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: 'bG6Lcl9js2O3hEn93RbvEOBo-gzGzoHsz',
+                appKey: 'S652Fxs2KIA1QoCdl6PQDfYP',
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
+
+                                    <div class="clear"></div>
                                 
                             
                         </div>
