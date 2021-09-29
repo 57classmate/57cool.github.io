@@ -1,55 +1,194 @@
-<!-- <style>
-  #bber-talk{display:-webkit-flex;display:flex;width:100%;line-height:2em;height:45px;max-width:760px;text-align:left;padding:5px 15px;margin-bottom:3em;position: relative;background-color: var(--light-header);border-radius:8px;font-size:15px;}
-#bber-talk svg{fill: currentColor;vertical-align: middle;display: inline;margin-right:5px;}
-.talk-list{margin: 0;max-height: 35px;overflow: hidden;}
-.talk-list li {list-style: none;margin-bottom: 10px;width: 100%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-</style>
-<div id="bber-talk"></div>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script>
-  //依赖 jQuery 库，其中 jsonUrl 改为自己的
-$(document).ready(function(){
-  if ( $("#bber-talk").length > 0 ) {
-    jsonUrl = "https://7477-twikoo-6gbp33x72a40527e-1259442930.tcb.qcloud.la/json/bber.json"
-    $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
-      var bberHtml = ''
-      $.each(res.data, function(i, item){
-        d = new Date(item.date)
-        date = d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate() +' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()
-        dataTime = '<span class="datatime">'+date+'</span>'
-        bberHtml += '<li class="item item-'+(i+1)+'">'+dataTime+'： <a href="https://immmmm.com/bb/">'+item.content+'</a></li>'
-      });
-      $('#bber-talk').append('<span class="index-talk-icon"><svg viewBox="0 0 1024 1024" width="21" height="21"><path d="M184.32 891.667692c-12.603077 0-25.206154-2.363077-37.809231-7.876923-37.021538-14.966154-59.864615-49.624615-59.864615-89.009231v-275.692307c0-212.676923 173.292308-385.969231 385.969231-385.969231h78.76923c212.676923 0 385.969231 173.292308 385.969231 385.969231 0 169.353846-137.846154 307.2-307.2 307.2H289.083077l-37.021539 37.021538c-18.904615 18.116923-43.323077 28.356923-67.741538 28.356923zM472.615385 195.347692c-178.018462 0-322.953846 144.935385-322.953847 322.953846v275.692308c0 21.267692 15.753846 29.144615 20.48 31.507692 4.726154 2.363077 22.055385 7.876923 37.021539-7.08923l46.473846-46.473846c6.301538-6.301538 14.178462-9.452308 22.055385-9.452308h354.461538c134.695385 0 244.184615-109.489231 244.184616-244.184616 0-178.018462-144.935385-322.953846-322.953847-322.953846H472.615385z"></path><path d="M321.378462 512m-59.076924 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M518.301538 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M715.224615 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153846 0 59.076923 59.076923 0 1 0-118.153846 0Z"></path></svg></span><ul class="talk-list">'+bberHtml+'</ul>')
-      Lately({ 'target': '#bber-talk .datatime' });
-    });
-    function Roll (){
-      var list_li = $('.talk-list li'),cur_li = list_li.first(),last_li = list_li.last();
-      last_li.after(cur_li);
-    };
-    setInterval(Roll,3000);
-  }
-});
-</script> -->
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="description" content="1、本站(57号同学 www.57cool.cool)所有资源全部收集于互联网，分享目的仅供大家学习与参考，
+所有资源，请在下载24小时内删除，如需付费，请购买正版。
+如有侵权，请联系a57cool@163.com 及时删除！57号同学不负..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/styles/main.css">
-    <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/font-awesome.css">
-    <meta name="description" content="分享来自互联网最好用，最有趣的产品 " />
-    <title>57号同学</title>
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>免责声明</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
 </head>
 
-
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://57classmate.github.io/57cool.github.io</div>
     <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <div class="side"><head>
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://57classmate.github.io/57cool.github.io">57号同学&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        <li><a data-pjax href="https://57classmate.github.io/57cool.github.io/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/styles/main.css">
     
@@ -820,8 +959,11 @@ menulist.eq(i).show();
 
 
 </div>
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
+            <!--------------- pc端菜单栏👆 ---------------->
+
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <div>
                 <div id="tab1" class="tab">
                     <div class="bars">
                         <span></span>
@@ -831,186 +973,161 @@ menulist.eq(i).show();
                     <div class="close"></div>
                 </div>
                 <div class="col-md-1 col-lg-3"></div>
-                <div class="mobilebar"><head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <link rel="stylesheet" href="https://57classmate.github.io/57cool.github.io/media/css/font-awesome.css">
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                
+                <img src="https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/cool/bj.png" class="postimage">
+                
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-09-14</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
+            <div class="posttag">
+                
+            </div>
+        </div>
+        
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">免责声明</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://57classmate.github.io/57cool.github.io/post/statement/</div>
+                <div id="rootaddr" style="display:none">https://57classmate.github.io/57cool.github.io</div>
+                
+            </div>
+            <div class="text ">
+                <p>1、本站(57号同学 www.57cool.cool)所有资源全部收集于互联网，分享目的仅供大家学习与参考，</p>
+<p>所有资源，请在下载24小时内删除，如需付费，请购买正版。</p>
+<p>如有侵权，请联系a57cool@163.com 及时删除！57号同学不负任何法律责任！</p>
+<p>2、本站资源不保证其完整性和安全性，下载后请自行检测安全，<br>
+在使用过程中出现的任何问题均与本站无关，请自行处理！</p>
+<p>3、本站为完全免费分享资源社区，所有资源问题，本站没责任，<br>
+更没义务提供任何性质的技术支持，需要技术支持的请购买官方商业版！</p>
+<p>4、访问 (57号同学 www.57cool.cool) 的用户必须明白，<br>
+( 57号同学 www.57cool.cool)对提供下载的软件及其它资源不拥有任何权利，</p>
+<p>其版权归该下载资源的合法拥有者所有！</p>
+<p>5、未经( 57号同学 www.57cool.cool)的明确许可，任何人不得盗链本站下载资源；<br>
+不得复制或仿造本网站或者在非(57号同学 www.57cool.cool)所属的服务器上建立镜像，</p>
+<p>( 57号同学 www.57cool.cool )对其自行开发的或和他人共同开发的所有内容、技术手段和服务拥有全部知识产权，</p>
+<p>任何人不得侵害或破坏，也不得擅自使用。</p>
+<p>1、57号同学 www.57cool.cool(下文简称本站)提供的所有内容仅供学习、交流和分享用途，只供参考。本站资源禁止并谢绝未经本站许可的使用，如若欲转载，请署名以及注明出处，请务必以文字链接的形式标明或保留文章原始出处和作者的信息。本站(原创)文章、资源、图片等所有内容，一经转载，即表示您已经接受上述声明！需自行承担一切风险与责任；</p>
+<p>2、关于本站的所有留言评论与转载、引用文纯属文字原作者个人观点，与本站观点及立场无关；浏览者在本站发表信息时需要遵守中国现行相应法律，不得发布违法信息；</p>
+<p>3、在本站的网页上有时候可能会出现有为浏览者提供方便的第三方链接(包括链接引用)或广告出现，链接或广告内容并不代表本站观点，若点击即可能将离开本站进入第三方站点，而本站将不为第三方站点带来的任何风险负责；</p>
+<p>4、关于转载内容，本站中有一部分来源于网络和媒体的内容(文章、源码、资源附件等)将通过好文转载、出于个人整理收藏，会员分享，信息普及目的或引用点评的形式在原作者默许(未注明、放弃、佚名、部分保留版权等)或注明允许通过相关网络版权协议的情况下进行转载或引用点评，并都会在文章注明出处或作者及相关信息、链接；因有些转文内容来自搜索引擎，出处可能有很多，本站不便确定查证，可能会将这类文章转载来源归类于来源于网络，并尽可能的标出参考来源、出处，本站尊重原作者的成果，若本站内容侵犯了您的合法权益时或者对转载内容有疑义的内容原作者，请书面反馈并提供确切的个人身份证明与详细资料信息在第一时间以邮件的形式进行联系沟通；</p>
+<p>5、本站不完全保证所有内容的完整性、准确性和及时性；本站的浏览如果出现由于Internet线路、恶意群发、黑客入侵或其他不可抗力等原因直接给您造成了麻烦，本站对您或任何第三方均不承担任何责任。</p>
+<p>6、用户会员在本站发表、分享的内容，仅表明其个人的立场和观点，并不代表本站的立场和观点。作为内容的发表或分享者，需自行对所发表或分享的内容负责，因所发表或分享的内容引发的一切纠纷、损失，由该内容的发表或分享者承担全部直接或间接（连带）法律责任，本站不承担任何法律责任。本站用户会员以各种方式使用服务和数据（包括但不限于发表、分享、转载、浏览）的过程中，不得以任何方式利用本站直接或间接从事违反中国法律法规、以及社会公德的行为，且用户会员应当恪守下述承诺：</p>
+<p>发布或分享提供的内容符合中国法律法规、社会公德；<br>
+发布或分享提供的内容不得侵害正当权利人之权利；<br>
+不得干扰、损害和侵犯本站的各种合法权利与利益；<br>
+遵守本站以及与之相关的网络服务的协议、指导原则、管理细则等。<br>
+本站有权对违反上述承诺的内容予以删除。</p>
+<p>更新日期：2021年09月14日</p>
+<p>57号同学</p>
 
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://57classmate.github.io/57cool.github.io">57号同学&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/file/zanshangma.png" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>57号同学（微信公众号同名）</li>
+            <li><strong>原文链接：</strong>https://57classmate.github.io/57cool.github.io/post/statement/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
         
-        
-        <li>
-          <a data-pjax href="/">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        
-          
-        <li><a data-pjax href="https://57classmate.github.io/57cool.github.io/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://57classmate.github.io/57cool.github.io/media/images/twitter.png" alt=""></i></a>
                 </div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                    <div class="mobilebar">
-                        <img src="" alt="" class="plbg">
+            </div>
+            
+        <div id="otherpost">
+            
+            <a  data-pjax class="prev-post-pc" href="https://57classmate.github.io/57cool.github.io/post/COC破解/"  style="color: black;">
+                <div id="ppcontainer">
+                    
+                    <img src="https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/wenzhang/COC_FM.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">“部落冲突”破解版</h4>
+                </div>
+            </a>
+            <div class="prev-post">
+                上一篇 <a  data-pjax href="https://57classmate.github.io/57cool.github.io/post/COC破解/">“部落冲突”破解版</a>
+            </div>
+            
+            
+            <a data-pjax class="next-post-pc" href="https://57classmate.github.io/57cool.github.io/post/hello-gridea/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://57classmate.github.io/57cool.github.io/post-images/hello-gridea.png" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">Hello Gridea</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://57classmate.github.io/57cool.github.io/post/hello-gridea/">Hello Gridea</a>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
 <script>
-    var bgchoice = "link";
-    if(bgchoice=='default')
-        var plbgurl = ""
-    else  
-        var plbgurl = "https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/cool/phone-bj.jpg"
-    $(".plbg").attr("src",plbgurl);
-    $(".plbg").fadeIn(200);
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
 </script>
+                    <div class="toc-container">
+                        
                     </div>
-                    <div id='speak'>
-</div>
-    <!-- 使用markdown渲染 -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
-    <!-- 不使用markdown渲染 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
-    <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script> -->
-<script>
-    var limitstr = '5'
-    lnum = parseInt(limitstr)
-    ispeakBber.init({
-            el: '#speak', // 容器选择器
-            name: '', // 显示的昵称
-            envId: '', // 环境id
-            region: 'ap-shanghai', // 腾讯云地址，默认为上海
-            limit: lnum, // 每次加载的条数，默认为5
-            avatar: '',
-            fromColor: 'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
-            loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
-            dbName: 'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
-        })
-        .then(function () {
-            // 哔哔加载完成后的回调函数，你可以写你自己的功能
-            console.log('哔哔 加载完成')
-    })
-</script>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
                     <!---------------------------- 评论系统👇 ------------------------->
                     <div id="comment" class="comment">
                         <div class="commentcontainer">
-                           
                             
                                 
+                                    
         <div id="vcomments">
         </div>
         <script>
@@ -1040,42 +1157,54 @@ menulist.eq(i).show();
 
 
                                     <div class="clear"></div>
-                              
-                              
-                          </div>
-                      </div>
-                     <!---------------------------- 评论系统👆 ------------------------->
+                                
+                            
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
                 </div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
                 <div class="col-md-1 col-lg-2"></div>
-                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-                <!------------------ 顶部菜单栏html👇--------->
-                
-                <!------------------ 顶部菜单栏html👆--------->
-                <div class="col-xs-6 col-sm-3"></div>
+                <div id="bg">
+                </div>
             </div>
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
             
         </div>
-        <div id="bg">
-        </div>
-        <!------- 背景图加载方式👇----- -->
-        <div id="bgchoice" style="display: none">link
-            </div>
+        <!-- aplayer播放器加载👇 -->
             
-            <div id="bgurl" style="display:none">https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/cool/bj.png</div>
-               
-        <!------- 背景图加载方式👆----- -->
+        <!-- aplayer播放器加载👆 -->
     </div>
+    
 
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://57classmate.github.io/57cool.github.io
-        </div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
+                </div>
+                
+                <div id="bgurl" style="display:none">https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/cool/bj.png</div>
+                
+    <!-- 背景图加载方式👆 -->
 </body>
 
-</html>
-<!-------------------- live2d功能👇 --------------------------->
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1087,7 +1216,29 @@ menulist.eq(i).show();
     loadlive2d("live2d", "https://57classmate.github.io/57cool.github.io/media/live2d/assets/tororo.model.json");
 </script>
 
-<!-------------------- live2d功能👆 --------------------------->
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
@@ -1108,4 +1259,29 @@ menulist.eq(i).show();
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
+
+
+
 <script src="https://57classmate.github.io/57cool.github.io/media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://57classmate.github.io/57cool.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
