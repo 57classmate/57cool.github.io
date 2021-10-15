@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://57classmate.github.io/57cool.github.io</id>
     <title>57号同学</title>
-    <updated>2021-09-29T07:28:04.287Z</updated>
+    <updated>2021-10-15T01:43:56.482Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://57classmate.github.io/57cool.github.io"/>
     <link rel="self" href="https://57classmate.github.io/57cool.github.io/atom.xml"/>
@@ -87,6 +87,17 @@
 <h2 id="得获取方式">🉐获取方式👇：</h2>
 <p>微信搜索公众号  <strong>57号同学</strong> （或微信扫一扫下方二维码），在公众号内回复  <strong>部落冲突破解版</strong>  即可获取下载链接，回复  <strong>福利</strong>  可获取更多资源哦</p>
 <figure data-type="image" tabindex="4"><img src="https://57cool.oss-cn-chengdu.aliyuncs.com/myblog/cool/%E5%85%AC%E4%BC%97%E5%8F%B7.jpg" alt="" loading="lazy"></figure>
+ <script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '28022-1634218068837-105',
+        name: '57号资源社',
+        qrcode: 'https://57cool.oss-cn-chengdu.aliyuncs.com/57ziyuanshe/ewm.jpg',
+        keyword: '5757',
+    });
+</script>
 ]]></content>
     </entry>
     <entry>
