@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://57classmate.github.io/57cool.github.io</id>
     <title>57号同学</title>
-    <updated>2021-11-03T08:53:13.838Z</updated>
+    <updated>2021-12-18T11:03:45.499Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://57classmate.github.io/57cool.github.io"/>
     <link rel="self" href="https://57classmate.github.io/57cool.github.io/atom.xml"/>
@@ -10,6 +10,60 @@
     <logo>https://57classmate.github.io/57cool.github.io/images/avatar.png</logo>
     <icon>https://57classmate.github.io/57cool.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 57号同学</rights>
+    <entry>
+        <title type="html"><![CDATA[随机小姐姐]]></title>
+        <id>https://57classmate.github.io/57cool.github.io/post/uRQybOL7y/</id>
+        <link href="https://57classmate.github.io/57cool.github.io/post/uRQybOL7y/">
+        </link>
+        <updated>2021-12-18T11:00:42.000Z</updated>
+        <content type="html"><![CDATA[<div>
+<section id="main"><video id="player" src="http://v.nrzj.vip/video.php" controls="controls" width="100%"
+height="400px"></video></section>
+</div>
+<div>
+<section id="buttons"><button id="switch">连续: 开</button> <button id="next1">播放下一个</button></section>
+</div>
+<p>
+<script>
+(function (window, document) {
+if (top != self) {
+window.top.location.replace(self.location.href);
+}
+var get = function (id) {
+return document.getElementById(id);
+}
+var bind = function (element, event, callback) {
+return element.addEventListener(event, callback);
+}
+var auto = true;
+var player = get('player');
+var randomm = function () {
+player.src = 'http://v.nrzj.vip/video.php?_t=' + Math.random();
+player.play();
+}
+bind(get('next1'), 'click', randomm);
+bind(player, 'error', function () {
+randomm();
+});
+bind(get('switch'), 'click', function () {
+auto = !auto;
+this.innerText = '连续: ' + (auto ? '开' : '关');
+});
+bind(player, 'ended', function () {
+if (auto) randomm();
+});
+})(window, document);
+</script>
+</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[完美解锁【腾讯视频】、【爱奇艺视频】、【优酷视频】VIP]]></title>
+        <id>https://57classmate.github.io/57cool.github.io/post/KP8j7fsyt/</id>
+        <link href="https://57classmate.github.io/57cool.github.io/post/KP8j7fsyt/">
+        </link>
+        <updated>2021-11-19T11:47:58.000Z</updated>
+        <content type="html"><![CDATA[<iframe src="https://t.1yb.co/Gtf8"></iframe>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[安装即无敌！白嫖全网影视，这一款APP就够了...]]></title>
         <id>https://57classmate.github.io/57cool.github.io/post/RcSJkBk8k/</id>
